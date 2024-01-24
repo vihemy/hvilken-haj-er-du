@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UltimateClean;
-//using System.Drawing;
-//using UnityEditor.SearchService;
 
 public class GameManager : MonoBehaviour
 {

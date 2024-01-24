@@ -7,12 +7,12 @@ public class ConsoleToGUI : MonoBehaviour
     bool doShow = false;
     int kChars = 700;
     [Header("Key to trigger on screen console:")]
-    [SerializeField] private KeyCode keyCode;
+    [SerializeField] private KeyCode keyCode = KeyCode.LeftControl;
 
     void OnEnable()
     {
         Application.logMessageReceived += Log;
-        
+
     }
     void OnDisable()
     {
@@ -43,7 +43,8 @@ public class ConsoleToGUI : MonoBehaviour
             string r = Random.Range(1000, 9999).ToString();
             filename = d + "/log-" + r + ".txt";
         }
-        try {
+        try
+        {
             System.IO.File.AppendAllText(filename, logString + "\n");
         }
         catch { }
