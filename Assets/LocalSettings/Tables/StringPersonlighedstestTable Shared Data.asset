@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringPersonlighedstestTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringPersonlighedstestTable
+  m_TableCollectionNameGuidString: 255cb5530a6a57d4f82d337965bfc4e0
+  m_Entries:
+  - m_Id: 22535180288
+    m_Key: RejseQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 285547401216
+    m_Key: "T\xF8jQ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5143528706048
+    m_Key: "T\xF8jA1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5234083729408
+    m_Key: "T\xF8jA2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238152204288
+    m_Key: "T\xF8jA3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241864163328
+    m_Key: "T\xF8jA4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289910321025024
+    m_Key: AktivQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289935713341440
+    m_Key: AktivA1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289961239875584
+    m_Key: AktivA2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289968902868992
+    m_Key: AktivA3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289995515727872
+    m_Key: AktivA4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291918302121984
+    m_Key: LegQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292011067543552
+    m_Key: Leg1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292032747900928
+    m_Key: Leg2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292048883388416
+    m_Key: Leg3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292063701864448
+    m_Key: Leg4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292332577722368
+    m_Key: SpiseQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292520046333952
+    m_Key: SpisevaneQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292564686311424
+    m_Key: SpisevaneA1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292595837407232
+    m_Key: SpisevaneA2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292603387154432
+    m_Key: SpisevaneA3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292612107112448
+    m_Key: SpisevaneA4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292622731284480
+    m_Key: "Sv\xF8mmeQ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292661415350272
+    m_Key: "Sv\xF8mmeA1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292687751385088
+    m_Key: "Sv\xF8mmeA2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292697448615936
+    m_Key: "Sv\xF8mmeA3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292707531722752
+    m_Key: "Sv\xF8mmeA4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292718181060608
+    m_Key: "S\xF8skendeQ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294098329374720
+    m_Key: "Sm\xE5plettetTitel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294135813869568
+    m_Key: "Sm\xE5plettetBeskrivelse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295444143116288
+    m_Key: "Gr\xF8nlandshajTitel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297725630582784
+    m_Key: "Gr\xF8nlandshajBeskrivelse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297787030999040
+    m_Key: SandtigerhajTitel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297806463209472
+    m_Key: SandtigerhajBeskrivelse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297866441756672
+    m_Key: WobbegongTitel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297888361189376
+    m_Key: WobbegongBeskrivelse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297948478148608
+    m_Key: HvalhajTitel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317776144338944
+    m_Key: ResultatOvertitel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321092387573760
+    m_Key: "Pr\xF8vIgenKnap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347869105328128
+    m_Key: "V\xE6lgKnap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5778192572059648
+    m_Key: HvalhajBeskrivelse
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5163564196587372568
+  references:
+    version: 2
+    RefIds:
+    - rid: 5163564196587372568
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1686661838453

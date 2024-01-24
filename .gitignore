@@ -1,7 +1,17 @@
 # Folders to large
 Art/
+Art.meta
 Animation/
+Animation.meta
 AddressableAssetsData/
+AddressableAssetsData.meta
+
+
+#Logs
+*.log
+
+# vsconfig
+.vsconfig
 
 # sensitive info
 config.txt

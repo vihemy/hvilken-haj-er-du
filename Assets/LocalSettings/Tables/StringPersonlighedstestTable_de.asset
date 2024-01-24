@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringPersonlighedstestTable_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 255cb5530a6a57d4f82d337965bfc4e0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22535180288
+    m_Localized: "Wo w\xFCrdest du gerne Urlaub machen? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 285547401216
+    m_Localized: "Welche Art von Kleidung tr\xE4gst du gern?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5143528706048
+    m_Localized: Kleidung mit Punkten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5234083729408
+    m_Localized: Kleidung mit Mustern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238152204288
+    m_Localized: "Kleidung in nat\xFCrlichen, ruhigen Farben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241864163328
+    m_Localized: Vintage-Kleidung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289935713341440
+    m_Localized: "Ich ruhe mich tags\xFCber aus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289961239875584
+    m_Localized: Ich bin immer in Bewegung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289968902868992
+    m_Localized: Ich erledige Dinge in meinem eigenen Tempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289995515727872
+    m_Localized: Ich bewege mich ruhig und mit Eleganz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289910321025024
+    m_Localized: "Welches Aktivit\xE4tslevel \xE4hnelt dir am meisten?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291918302121984
+    m_Localized: "Was w\xFCrdest du am Liebsten spielen? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292011067543552
+    m_Localized: 'Verstecken '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292032747900928
+    m_Localized: Fangen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292048883388416
+    m_Localized: "Ich bin zu alt f\xFCr Spiele"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292063701864448
+    m_Localized: "Ich m\xF6chte nicht spielen "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292332577722368
+    m_Localized: "Was w\xFCrdest du gerne essen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292520046333952
+    m_Localized: "Welche Essgewohnheit \xE4hnelt dir am meisten?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292622731284480
+    m_Localized: "Wie denkst du \xFCber das Schwimmen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292718181060608
+    m_Localized: Wie viele Geschwister hast du?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292564686311424
+    m_Localized: 'Ich werde oft nachts hungrig '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292595837407232
+    m_Localized: 'Ich kann eine lange Zeit nichts essen '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292603387154432
+    m_Localized: Ich bin ein Allesfresser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292612107112448
+    m_Localized: "Ich esse \xFCber den Tag verteilt kleinere Portionen "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292661415350272
+    m_Localized: "Ich schwimme so wenig wie m\xF6glich "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292687751385088
+    m_Localized: "Ich benutze Schwimmfl\xFCgel "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292697448615936
+    m_Localized: 'Ich schwimme recht langsam '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292707531722752
+    m_Localized: 'Ich bin ein erfahrener Schwimmer '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317776144338944
+    m_Localized: Du bist ein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294098329374720
+    m_Localized: Kleingefleckter Katzenhai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294135813869568
+    m_Localized: "Du hast am meisten mit dem Kleingefleckten Katzenhai gemeinsam!
+      \r\nDer kleingefleckte Katzenhai ist einer der h\xE4ufigsten Haie in D\xE4nemark.
+      Tags\xFCber faulenzt er auf dem Meeresgrund, doch nachts geht er auf die Jagd.
+      In der Nacht gibt es nicht viel zu sehen, also nutzt er seinen scharfen Geruchssinn,
+      um Beute zu finden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297725630582784
+    m_Localized: "Du hast am meisten mit dem Gr\xF6nlandhai gemeinsam! \r\nDer Gr\xF6nlandhai
+      ist geheimnisumwittert, und man glaubt, dass er bis zu 400 Jahre alt werden
+      kann. Du hast vielleicht die meisten Gemeinsamkeiten mit dem Gr\xF6nlandhai,
+      aber so lange wirst du wahrscheinlich nicht leben!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297787030999040
+    m_Localized: 'Sandtigerhai '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297806463209472
+    m_Localized: "Du hast am meisten mit dem Sandtigerhai gemeinsam! \r\nMit seinem
+      furchterregenden Gebiss mag der Sandtigerhai nicht gerade als idealer Schwimmbegleiter
+      erscheinen. Doch trotz seines wilden Aussehens ist der Sandtigerhai nicht daf\xFCr
+      bekannt, aggressiv zu sein, solange er nicht gest\xF6rt wird. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297888361189376
+    m_Localized: "Du hast am meisten mit dem Gefleckten Wobbegong gemeinsam! \r\nDer
+      Gefleckte Wobbegong lebt nahe der K\xFCste im S\xFCden Australiens. Hier ist
+      er gut getarnt und faulenzt auf dem Meeresgrund. Trotz seines ruhigen und unschuldigen
+      Auftretens hat der Gefleckte Wobbegong scharfe Z\xE4hne, die er ohne Scheu
+      einsetzt!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297948478148608
+    m_Localized: Walhai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297866441756672
+    m_Localized: Gefleckter Wobbegong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295444143116288
+    m_Localized: "Gr\xF6nlandhai"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321092387573760
+    m_Localized: Nochmal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347869105328128
+    m_Localized: "W\xE4hle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5778192572059648
+    m_Localized: "Du hast am meisten mit dem Walhai gemeinsam!\r\nDer Walhai ist
+      der gr\xF6\xDFte Fisch der Welt und kann bis zu fast 20 Meter lang werden!
+      Der Riese schwimmt mit offenem Maul durch den Ozean und frisst alle kleinen
+      Tiere, die ihm ins Maul fallen. Der Walhai bringt lebende Jungtiere zur Welt
+      - bis zu 300 auf einmal!\r\n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

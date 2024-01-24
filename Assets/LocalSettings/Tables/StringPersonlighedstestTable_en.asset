@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringPersonlighedstestTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 255cb5530a6a57d4f82d337965bfc4e0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22535180288
+    m_Localized: 'Where would you like to go on vacation? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 285547401216
+    m_Localized: What kind of clothes do you like to wear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5143528706048
+    m_Localized: 'Clothes with dots '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5234083729408
+    m_Localized: Clothes with patterns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238152204288
+    m_Localized: Clothes in natural and relaxed colours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241864163328
+    m_Localized: Vintage clothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289935713341440
+    m_Localized: 'I rest during the daytime '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289961239875584
+    m_Localized: "I\u2019m always on the move "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289968902868992
+    m_Localized: 'I take things at my own pace '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289995515727872
+    m_Localized: 'I move calmly and with elegance '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289910321025024
+    m_Localized: Which activity level resembles yours the most?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291918302121984
+    m_Localized: 'What would you prefer to play? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292011067543552
+    m_Localized: 'Hide-and-seek '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292032747900928
+    m_Localized: 'Tag '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292048883388416
+    m_Localized: "I\u2019m too old to play "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292063701864448
+    m_Localized: "I don\u2019t feel like playing "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292332577722368
+    m_Localized: What would you prefer to eat?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292520046333952
+    m_Localized: Which eating habit resembles yours the most?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292622731284480
+    m_Localized: How do you feel about swimming?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292718181060608
+    m_Localized: How many siblings do you have?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292564686311424
+    m_Localized: 'I often get hungry at night. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292595837407232
+    m_Localized: 'I can go a while without eating '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292603387154432
+    m_Localized: "I\u2019m basically omnivorous "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292612107112448
+    m_Localized: 'I eat throughout the day and prefer small portions at a time '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292661415350272
+    m_Localized: 'I swim as little as possible '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292687751385088
+    m_Localized: 'I use water wings '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292697448615936
+    m_Localized: 'I swim quite slowly '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292707531722752
+    m_Localized: 'I am an experienced swimmer '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317776144338944
+    m_Localized: You are a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294098329374720
+    m_Localized: Small-spotted catshark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294135813869568
+    m_Localized: "You have most in common with the small-spotted catshark! \r\nThe
+      small-spotted catshark is one of the most common sharks in Denmark. During
+      the day, it lies on the seabed and lazes around, only venturing out to hunt
+      at night. At night, when visibility is poor, the catshark relies on its great
+      sense of smell to locate its prey."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297725630582784
+    m_Localized: "You have most in common with the Greenland shark! \r\nThe Greenland
+      shark is surrounded by great mystery, and it is believed to live up to 400
+      years. While you may have most in common with the Greenland shark, you probably
+      won\u2019t live THAT long!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297787030999040
+    m_Localized: Sand tiger shark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297806463209472
+    m_Localized: "You have most in common with the sand tiger shark! \r\nWith its
+      fearsome set of teeth, the sand tiger shark doesn\u2019t appear to be an ideal
+      swimming companion. However, despite its ferocious looks, the sand tiger shark
+      is not known to be aggressive unless provoked."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297888361189376
+    m_Localized: "You have most in common with the spotted wobbegong! \r\nThe spotted
+      wobbegong lives near the coast of southern Australia. It rests on the seabed
+      and blends in with its surroundings due to its excellent camouflage. Despite
+      its otherwise calm appearance and temper, the spotted wobbegong possesses a
+      set of sharp teeth that it is not afraid to use!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297948478148608
+    m_Localized: Whale shark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297866441756672
+    m_Localized: Spotted wobbegong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295444143116288
+    m_Localized: Greenland Shark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321092387573760
+    m_Localized: Try again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347869105328128
+    m_Localized: Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5778192572059648
+    m_Localized: "You have most in common with the whale shark!\r\nThe whale shark
+      is the world\u2019s largest fish and can reach lengths of up to nearly 20 meters!
+      This colossal giant swims through the ocean with its mouth wide open to prey
+      on all the small creatures, that get caught in its mouth. The whale shark gives
+      birth to live young \u2013 up to 300 at a time!\r\n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
