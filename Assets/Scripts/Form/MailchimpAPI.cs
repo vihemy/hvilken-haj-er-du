@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class MailchimpAPI : MonoBehaviour
+public class MailchimpAPI : Singleton<MailchimpAPI>
 {
     private static string dataCenter;
     private static string apiKey;
