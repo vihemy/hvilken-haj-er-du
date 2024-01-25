@@ -14,7 +14,7 @@ public class NavigationPanelController : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        int currentBuildIndex = gameManager.GetCurrentSceneBuildIndex()-1; // minus 1 because first scene is idle
+        int currentBuildIndex = SceneLoader.Instance.GetCurrentSceneBuildIndex() - 1; // minus 1 because first scene is idle
 
         Transform childTransform = GetChildCorrespondingToBuildIndex(currentBuildIndex); // uses transform instead of GameObject because transform is easier to work with. GameObject of transform is accesed in final function-call.
         SwitchImageToFilled(childTransform);
