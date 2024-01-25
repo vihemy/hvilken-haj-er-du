@@ -36,7 +36,7 @@ public class AnswerScript : MonoBehaviour
             scoreManager.pointBins[answer] += 1; // ... add 1 to the proper pointBin in scoreManager.
         }
 
-        gameManager.LoadNextScene(); // calls nextQuestion-method in gameManager
+        SceneLoader.Instance.LoadNextScene(); // calls nextQuestion-method in gameManager
     }
 
 
@@ -51,9 +51,9 @@ public class AnswerScript : MonoBehaviour
                 scoreManager.pointBins["Smaaplettet roedhaj"] += 1;
                 break;
             case float n when (n <= 2): // when value (here named n) has sepcifik conditional relation to number = assign points to corresponding bin.
-                scoreManager.pointBins["Sandtigerhaj"] += 1; 
+                scoreManager.pointBins["Sandtigerhaj"] += 1;
                 break;
-            case float n when (n >= 3 && n <=9):
+            case float n when (n >= 3 && n <= 9):
                 scoreManager.pointBins["Groenlandshaj"] += 1;
                 break;
             case float n when (n >= 10):
@@ -64,6 +64,6 @@ public class AnswerScript : MonoBehaviour
                 break;
         }
 
-        gameManager.LoadNextScene(); // calls nextQuestion-method in gameManager
-    } 
+        SceneLoader.Instance.LoadNextScene(); // calls nextQuestion-method in gameManager
+    }
 }
