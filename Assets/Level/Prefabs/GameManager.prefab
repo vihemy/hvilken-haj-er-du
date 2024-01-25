@@ -52,8 +52,7 @@ MonoBehaviour:
   scoreManagerPrefab: {fileID: 7857991849802917870, guid: aeb6b680547a81b4ba24569b328329bd, type: 3}
   statManagerPrefab: {fileID: 1382745367538562298, guid: 720bae30e0f42b7439a0638203e17352, type: 3}
   statDisplayPrefab: {fileID: 1277300879153737930, guid: 5113c6563fa202a4c9b023f69aee5d78, type: 3}
-  sceneTransitionDuration: 1
-  sceneTransitionColor: {r: 0, g: 0, b: 0, a: 1}
+  sceneLoaderPrefab: {fileID: 7374893349587071785, guid: 2fe46a2d438a59c469ffac0d320c6abe, type: 3}
 --- !u!114 &5024378377436056709
 MonoBehaviour:
   m_ObjectHideFlags: 0
