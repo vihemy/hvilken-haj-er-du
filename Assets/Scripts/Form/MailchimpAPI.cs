@@ -25,7 +25,7 @@ public class MailchimpAPI : MonoBehaviour
     public void AddSubscriber(string email, string fname, string lname)
     {
         string requestJson = CreateSubscriberJson(email, fname, lname);
-        CallMailchimpApi(dataCenter, $"lists/{listId}/members", requestJson, apiKey);
+        AddSubscribertViaAPI(dataCenter, $"lists/{listId}/members", requestJson, apiKey);
     }
 
     private string CreateSubscriberJson(string email, string fname, string lname)
@@ -52,7 +52,7 @@ public class MailchimpAPI : MonoBehaviour
     }
 
 
-    private static void CallMailchimpApi(string dataCenter, string method, string requestJson, string key)
+    private static void AddSubscribertViaAPI(string dataCenter, string method, string requestJson, string key)
     {
         string endpoint = $"https://{dataCenter}.api.mailchimp.com/3.0/{method}";
         byte[] dataStream = Encoding.UTF8.GetBytes(requestJson);
