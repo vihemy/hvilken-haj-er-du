@@ -19,13 +19,12 @@ public class MailchimpAPI : Singleton<MailchimpAPI>
         dataCenter = ConfigLoader.Instance.LoadFromConfig("DATA_CENTER");
         apiKey = ConfigLoader.Instance.LoadFromConfig("API_KEY");
         listId = ConfigLoader.Instance.LoadFromConfig("LIST_ID");
-        // AddSubscriber("test7@testesen.dk", "Test", "Testesen");
     }
 
     public void AddSubscriber(string email, string fname, string lname)
     {
         string requestJson = CreateSubscriberJson(email, fname, lname);
-        AddSubscribertViaAPI(dataCenter, $"lists/{listId}/members", requestJson, apiKey);
+        StartCoroutine(AddSubscriberViaAPI(dataCenter, $"lists/{listId}/members", requestJson, apiKey));
     }
 
     private string CreateSubscriberJson(string email, string fname, string lname)
@@ -51,61 +50,69 @@ public class MailchimpAPI : Singleton<MailchimpAPI>
         return json;
     }
 
+    private IEnumerator AddSubscriberViaAPI(string dataCenter, string method, string requestJson, string key)
+    {
+        var request = CreateMailchimpRequest(dataCenter, method, requestJson, key);
+        yield return SendRequest(request);
 
-    private static void AddSubscribertViaAPI(string dataCenter, string method, string requestJson, string key)
+        HandleResponse(request, requestJson);
+    }
+
+    private UnityWebRequest CreateMailchimpRequest(string dataCenter, string method, string requestJson, string key)
     {
         string endpoint = $"https://{dataCenter}.api.mailchimp.com/3.0/{method}";
-        byte[] dataStream = Encoding.UTF8.GetBytes(requestJson);
-        WebRequest request = WebRequest.Create(endpoint);
-        try
-        {
-            request.ContentType = "application/json";
-            SetBasicAuthHeader(request, "anystring", key); // BASIC AUTH
-            request.Method = "POST";
-            request.ContentLength = dataStream.Length;
+        var request = new UnityWebRequest(endpoint, "POST");
+        SetupRequestBody(request, requestJson);
+        SetupRequestHeaders(request, key);
+        return request;
+    }
 
-            Stream newStream = request.GetRequestStream();
-            newStream.Write(dataStream, 0, dataStream.Length);
-            newStream.Close();
+    private void SetupRequestBody(UnityWebRequest request, string requestJson)
+    {
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(requestJson);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+    }
 
-            WebResponse response = request.GetResponse();
-            response.Close();
-        }
-        catch (WebException ex)
+    private void SetupRequestHeaders(UnityWebRequest request, string key)
+    {
+        request.SetRequestHeader("Content-Type", "application/json");
+        string authHeader = Convert.ToBase64String(Encoding.ASCII.GetBytes($"anystring:{key}"));
+        request.SetRequestHeader("Authorization", "Basic " + authHeader);
+    }
+
+    private IEnumerator SendRequest(UnityWebRequest request)
+    {
+        yield return request.SendWebRequest();
+    }
+
+    private void HandleResponse(UnityWebRequest request, string requestJson)
+    {
+        if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(ex.Message);
+            Debug.LogError(request.error);
             Debug.LogError(requestJson);
-
-            Stream responseStream = ex.Response?.GetResponseStream();
-            if (responseStream != null)
-            {
-                using StreamReader sr = new StreamReader(responseStream);
-                Debug.LogError(sr.ReadToEnd());
-            }
+            Debug.LogError(request.downloadHandler.text);
+        }
+        else
+        {
+            Debug.Log("Response from Mailchimp: " + request.downloadHandler.text);
         }
     }
+}
 
-    private static void SetBasicAuthHeader(WebRequest request, string username, string password)
-    {
-        string auth = $"{username}:{password}";
-        auth = Convert.ToBase64String(Encoding.Default.GetBytes(auth));
-        request.Headers["Authorization"] = "Basic " + auth;
-    }
+public class SubscriberInfo
+{
+    public string email_address { get; set; }
+    public string status { get; set; }
+    public MergeFields merge_fields { get; set; }
+    public List<string> tags { get; set; }
+}
 
-
-    public class SubscriberInfo
-    {
-        public string email_address { get; set; }
-        public string status { get; set; }
-        public MergeFields merge_fields { get; set; }
-        public List<string> tags { get; set; }
-    }
-
-    public class MergeFields
-    {
-        public string FNAME { get; set; }
-        public string LNAME { get; set; }
-        public string GDPR { get; set; }
-        public string KONKBET { get; set; }
-    }
+public class MergeFields
+{
+    public string FNAME { get; set; }
+    public string LNAME { get; set; }
+    public string GDPR { get; set; }
+    public string KONKBET { get; set; }
 }
