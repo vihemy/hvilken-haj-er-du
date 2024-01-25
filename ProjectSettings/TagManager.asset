@@ -10,6 +10,8 @@ TagManager:
   - FilledNavCircle
   - StatManager
   - StatDisplay
+  - Standart
+  - SceneLoader
   layers:
   - Default
   - TransparentFX

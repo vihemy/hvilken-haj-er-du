@@ -1,57 +1,93 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.UI;
-// using TMPro;
-// using System;
-// using System.Runtime.CompilerServices;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
+using UltimateClean;
 
-// public class FormInput : Singleton<FormInput>
-// {
-//     [SerializeField] private TMP_InputField emailInputField;
-//     [SerializeField] private TMP_InputField fnameInputField;
-//     [SerializeField] private TMP_InputField lnameInputField;
+public class FormInput : Singleton<FormInput>
+{
+    [SerializeField] private TMP_InputField emailInputField;
+    [SerializeField] private TMP_InputField fnameInputField;
+    [SerializeField] private TMP_InputField lnameInputField;
 
-//     void Start()
-//     {
-//         ResetInputField();
-//     }
+    [SerializeField] private Toggle gdprToggle;
 
-//     public void AddMember()
-//     {
-//         if (!IsFieldEmpty())
-//         {
-//             MemberInfo memberInfo = CreateMemberInfo();
-//             MailchimpAPICaller.Instance.AddMember(memberInfo);
-//             Debug.Log($"Email: {memberInfo.email_address}, First Name: {memberInfo.merge_fields.FNAME}, Last Name: {memberInfo.merge_fields.LNAME}");
-//             ResetInputField();
-//         }
-//     }
+    [SerializeField] private Toggle konkbetToggle;
 
-//     private MemberInfo CreateMemberInfo()
-//     {
-//         string email = emailInputField.text;
-//         string fname = fnameInputField.text;
-//         string lname = lnameInputField.text;
+    [SerializeField] private CleanButton signupButton;
+    private bool isButtonOpenToSubmit = false;
+    void Start()
+    {
+        ResetInputField();
+        CloseButtonToSubmit();
+    }
 
-//         MemberInfo info = new MemberInfo();
-//         info.email_address = email;
-//         info.merge_fields.FNAME = fname;
-//         info.merge_fields.LNAME = lname;
+    void Update()
+    {
+        if (!isButtonOpenToSubmit)
+        {
+            if (IsFormComplete())
+            {
+                OpenButtonToSubmit();
+            }
+        }
+        else
+        {
+            if (!IsFormComplete())
+            {
+                CloseButtonToSubmit();
+            }
+        }
 
-//         return info;
-//     }
+    }
 
-//     private bool IsFieldEmpty()
-//     {
-//         return string.IsNullOrEmpty(emailInputField.text) || string.IsNullOrEmpty(fnameInputField.text) || string.IsNullOrEmpty(lnameInputField.text);
-//     }
+    void OpenButtonToSubmit()
+    {
+        signupButton.interactable = true;
+        // buttonAnimator.SetTrigger("Normal");
+        isButtonOpenToSubmit = true;
+    }
 
-//     private void ResetInputField()
-//     {
-//         emailInputField.text = "";
-//         fnameInputField.text = "";
-//         lnameInputField.text = "";
-//         emailInputField.Select();
-//     }
-// }
+    void CloseButtonToSubmit()
+    {
+        signupButton.interactable = false;
+        // buttonAnimator.SetTrigger("Disabled");
+        isButtonOpenToSubmit = false;
+    }
+
+    public void AddMember()
+    {
+        if (!IsFormComplete())
+        {
+            Debug.Log("Alle tekstfelter skal udfyldes og alle bokse skal være markeret, for at deltage i konkurrencen");
+        }
+        else
+        {
+            MailchimpAPI.Instance.AddSubscriber(emailInputField.text, fnameInputField.text, lnameInputField.text);
+            Debug.Log($"Email: {emailInputField.text}, First Name: {fnameInputField.text}, Last Name: {lnameInputField.text}");
+            ResetInputField();
+        }
+    }
+
+    private bool IsFormComplete()
+    {
+        return AreFieldsFilledOut() && AreTogglesChecked();
+    }
+    private bool AreFieldsFilledOut()
+    {
+        return !string.IsNullOrEmpty(emailInputField.text) && !string.IsNullOrEmpty(fnameInputField.text) && !string.IsNullOrEmpty(lnameInputField.text);
+    }
+    private bool AreTogglesChecked()
+    {
+        return gdprToggle.isOn && konkbetToggle.isOn;
+    }
+
+    private void ResetInputField()
+    {
+        emailInputField.text = "";
+        fnameInputField.text = "";
+        lnameInputField.text = "";
+    }
+}
