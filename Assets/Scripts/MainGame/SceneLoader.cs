@@ -23,7 +23,6 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         string sceneName = NameOfSceneByBuildIndex(buildIndex);
         PerformTransition(sceneName);
-        // UnityAnalytics.Instance.SendCustomEvent("Left game", false); //this is only called when player leaves the game, and timer runs out.
     }
 
     public void LoadSceneByIndexWithoutAnalytics(int buildIndex)

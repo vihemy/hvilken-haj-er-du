@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using UnityEditor.Rendering;
 using UnityEngine;
+
 public class TimerWithCoroutine : MonoBehaviour
 {
     /// SCRIPT FROM HERE: https://blog.yarsalabs.com/simple-timer-in-unity-part1/
