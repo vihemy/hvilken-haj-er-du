@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject scoreManagerPrefab;
     [SerializeField] private GameObject statManagerPrefab;
     [SerializeField] private GameObject statDisplayPrefab;
-    [SerializeField] private GameObject sceneLoaderPrefab;
 
     private void Awake()
     {
@@ -18,7 +17,6 @@ public class GameManager : MonoBehaviour
         CheckPrefabInstances("ScoreManager", scoreManagerPrefab); // check if there are multiple instances of ScoreManager
         CheckPrefabInstances("StatManager", statManagerPrefab); // check if there are multiple instances of StatManager
         CheckPrefabInstances("StatDisplay", statDisplayPrefab);
-        CheckPrefabInstances("SceneLoader", sceneLoaderPrefab);
         RemoveCurser();
     }
 
