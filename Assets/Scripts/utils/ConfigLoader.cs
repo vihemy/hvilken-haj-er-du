@@ -1,29 +1,62 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using System.IO;
 
 public class ConfigLoader : Singleton<ConfigLoader>
 {
     private Dictionary<string, string> configValues;
+    public delegate void ConfigLoadedDelegate();
+    public event ConfigLoadedDelegate OnConfigLoaded;
 
-    new void Awake()
+    void Start()
     {
-        LoadConfig();
+        StartCoroutine(LoadConfig());
     }
 
-    private void LoadConfig()
+    private IEnumerator LoadConfig()
     {
         string configFilePath = Path.Combine(Application.streamingAssetsPath, "config.txt");
 
-        if (!File.Exists(configFilePath))
+        if (configFilePath.Contains("://") || configFilePath.Contains(":///"))
         {
-            Debug.LogError("Config file not found in StreamingAssets");
-            return;
-        }
+            // Handle platforms where StreamingAssets are in a compressed format
+            UnityWebRequest uwr = UnityWebRequest.Get(configFilePath);
+            yield return uwr.SendWebRequest();
 
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Error loading config file: " + uwr.error);
+            }
+            else
+            {
+                // Successfully loaded the config file
+                ProcessConfigFile(uwr.downloadHandler.text);
+                OnConfigLoaded?.Invoke(); // Invoke the callback
+            }
+        }
+        else
+        {
+            // Handle Desktop (Windows, macOS) and Editor
+            if (File.Exists(configFilePath))
+            {
+                string dataAsJson = File.ReadAllText(configFilePath);
+                ProcessConfigFile(dataAsJson);
+                OnConfigLoaded?.Invoke(); // Invoke the callback
+            }
+            else
+            {
+                Debug.LogError("Config file not found in StreamingAssets");
+            }
+        }
+    }
+
+    private void ProcessConfigFile(string configFileContent)
+    {
         configValues = new Dictionary<string, string>();
 
-        string[] lines = File.ReadAllLines(configFilePath);
+        string[] lines = configFileContent.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None);
         foreach (string line in lines)
         {
             if (!string.IsNullOrWhiteSpace(line) && line.Contains("="))
@@ -39,12 +72,19 @@ public class ConfigLoader : Singleton<ConfigLoader>
 
     public string LoadFromConfig(string key)
     {
-        if (configValues.TryGetValue(key, out string value))
+        try
         {
-            return value;
+            return configValues[key];
         }
-
-        Debug.LogError($"Key '{key}' not found in config file.");
-        return string.Empty;
+        catch (KeyNotFoundException)
+        {
+            Debug.LogError($"Key '{key}' not found in config file.");
+            return string.Empty;
+        }
+        catch (System.NullReferenceException)
+        {
+            Debug.LogError($"Config file not loaded.");
+            return string.Empty;
+        }
     }
 }

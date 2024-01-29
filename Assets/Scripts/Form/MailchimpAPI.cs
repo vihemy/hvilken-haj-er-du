@@ -16,12 +16,17 @@ public class MailchimpAPI : Singleton<MailchimpAPI>
 
     private void Start()
     {
+        ConfigLoader.Instance.OnConfigLoaded += LoadCredentials;
+    }
+
+    private static void LoadCredentials()
+    {
         dataCenter = ConfigLoader.Instance.LoadFromConfig("DATA_CENTER");
         apiKey = ConfigLoader.Instance.LoadFromConfig("API_KEY");
         listId = ConfigLoader.Instance.LoadFromConfig("LIST_ID");
     }
 
-    public void AddSubscriber(string email, string fname, string lname)
+    public void AddSubscriber(string email, string fname, string lname = "")
     {
         string requestJson = CreateSubscriberJson(email, fname, lname);
         StartCoroutine(AddSubscriberViaAPI(dataCenter, $"lists/{listId}/members", requestJson, apiKey));

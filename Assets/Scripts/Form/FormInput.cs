@@ -10,8 +10,6 @@ public class FormInput : Singleton<FormInput>
 {
     [SerializeField] private TMP_InputField emailInputField;
     [SerializeField] private TMP_InputField fnameInputField;
-    [SerializeField] private TMP_InputField lnameInputField;
-
     [SerializeField] private Toggle gdprToggle;
 
     [SerializeField] private Toggle konkbetToggle;
@@ -46,14 +44,12 @@ public class FormInput : Singleton<FormInput>
     void OpenButtonToSubmit()
     {
         signupButton.interactable = true;
-        // buttonAnimator.SetTrigger("Normal");
         isButtonOpenToSubmit = true;
     }
 
     void CloseButtonToSubmit()
     {
         signupButton.interactable = false;
-        // buttonAnimator.SetTrigger("Disabled");
         isButtonOpenToSubmit = false;
     }
 
@@ -65,8 +61,7 @@ public class FormInput : Singleton<FormInput>
         }
         else
         {
-            MailchimpAPI.Instance.AddSubscriber(emailInputField.text, fnameInputField.text, lnameInputField.text);
-            Debug.Log($"Email: {emailInputField.text}, First Name: {fnameInputField.text}, Last Name: {lnameInputField.text}");
+            MailchimpAPI.Instance.AddSubscriber(emailInputField.text, fnameInputField.text);
             ResetInputField();
         }
     }
@@ -77,7 +72,7 @@ public class FormInput : Singleton<FormInput>
     }
     private bool AreFieldsFilledOut()
     {
-        return !string.IsNullOrEmpty(emailInputField.text) && !string.IsNullOrEmpty(fnameInputField.text) && !string.IsNullOrEmpty(lnameInputField.text);
+        return !string.IsNullOrEmpty(emailInputField.text) && !string.IsNullOrEmpty(fnameInputField.text);
     }
     private bool AreTogglesChecked()
     {
@@ -88,6 +83,5 @@ public class FormInput : Singleton<FormInput>
     {
         emailInputField.text = "";
         fnameInputField.text = "";
-        lnameInputField.text = "";
     }
 }
