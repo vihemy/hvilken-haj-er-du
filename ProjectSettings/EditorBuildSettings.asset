@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/IdleScene.unity
     guid: 3e1ef88359bd2dc48b7b9d9db769ff40
   - enabled: 1
+    path: Assets/Level/Scenes/Form.unity
+    guid: 214042a1f6edb614a98a022842673732
+  - enabled: 1
     path: Assets/Level/Scenes/QuestionRejse.unity
     guid: 7685dd4bb2b85d446a58ea0c3c51bfb0
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/QuestionAktivitetsniveau.unity
     guid: d0379134787f016499ece934efba7489
-  - enabled: 1
-    path: Assets/Level/Scenes/Form.unity
-    guid: 214042a1f6edb614a98a022842673732
   - enabled: 1
     path: Assets/Level/Scenes/ResultScene.unity
     guid: 297b5604191907747997d68491901422
